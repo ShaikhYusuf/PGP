@@ -213,15 +213,16 @@ class FormValidator {
 
     if (isValid) {
       // Get form values
-      const fullName = this.form.querySelector('#fullName')?.value || '';
+      const fullName = this.form.querySelector('#name')?.value || '';
       const email = this.form.querySelector('#email')?.value || '';
       const company = this.form.querySelector('#company')?.value || '';
-      const phone = this.form.querySelector('#phone')?.value || 'Not provided';
-      const service = this.form.querySelector('#service')?.value || '';
+      // Phone and service are not in the current HTML form
+      const phone = 'Not provided';
+      const service = 'General Inquiry';
       const message = this.form.querySelector('#message')?.value || '';
 
       // Create professional email
-      const subject = encodeURIComponent(`Business Inquiry: ${service} - ${company}`);
+      const subject = encodeURIComponent(`Business Inquiry: ${company}`);
       const body = encodeURIComponent(
         `NEW BUSINESS INQUIRY - POPULAR GLASS PRINTERS\n` +
         `============================================\n\n` +
@@ -229,11 +230,7 @@ class FormValidator {
         `-------------------\n` +
         `Name: ${fullName}\n` +
         `Company: ${company}\n` +
-        `Email: ${email}\n` +
-        `Phone: ${phone}\n\n` +
-        `SERVICE INTEREST:\n` +
-        `----------------\n` +
-        `${service}\n\n` +
+        `Email: ${email}\n\n` +
         `PROJECT DETAILS:\n` +
         `---------------\n` +
         `${message}\n\n` +
@@ -433,6 +430,10 @@ class Analytics {
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize all modules
   new Navigation();
+  new FormValidator('#contact-form');
+  new LazyLoader();
+  new ScrollAnimations();
+  new PortfolioFilter();
 
   // Track CTA clicks
   document.querySelectorAll('.btn--primary, .btn--primary-dark').forEach(btn => {
