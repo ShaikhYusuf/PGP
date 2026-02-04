@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Portfolio | Popular Glass Printers | Decorated Glass Bottle Gallery</title>
+    <meta name="description"
+        content="Explore Popular Glass Printers' portfolio of decorated glass bottles. Screen printing, color coating, hot foil stamping, and etching for cosmetics, spirits, FMCG, and luxury brands.">
+    <meta name="keywords"
+        content="glass bottle decoration portfolio, decorated bottle gallery, glass printing examples, luxury packaging portfolio">
+
+        <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">Popular Glass Printers</a>
+
+            <nav class="header__nav">
+                <a href="index.html" class="header__nav-link">Home</a>
+                <a href="services.html" class="header__nav-link">Services</a>
+                <a href="portfolio.html" class="header__nav-link header__nav-link--active">Portfolio</a>
+                <a href="about.html" class="header__nav-link">About</a>
+                <a href="contact.html" class="btn btn--primary btn--sm">Contact Us</a>
+            </nav>
+
+            <button class="header__menu-toggle" aria-label="Toggle menu">
+                <span class="header__menu-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-dark" style="padding-top: 140px; padding-bottom: 80px;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <div
+                    style="font-size: var(--text-sm); color: var(--color-gold); font-weight: var(--font-semibold); text-transform: uppercase; letter-spacing: var(--tracking-wider); margin-bottom: var(--space-4);">
+                    Our Work
+                </div>
+                <h1 class="text-white" style="margin-bottom: var(--space-6);">
+                    Crafted for Global Brands
+                </h1>
+                <p class="text-white"
+                    style="font-size: var(--text-xl); line-height: var(--leading-relaxed); opacity: 0.9; margin-bottom: var(--space-10);">
+                    Every bottle tells a story. Explore our portfolio of precision-decorated glass packaging for
+                    cosmetics, spirits, FMCG, and luxury brands worldwide.
+                </p>
+
+                <!-- Portfolio Stats -->
+                <div class="grid grid-cols-4 gap-6" style="max-width: 800px; margin: 0 auto;">
+                    <div style="text-align: center;">
+                        <div
+                            style="font-size: var(--text-4xl); font-weight: var(--font-bold); color: var(--color-gold); margin-bottom: var(--space-2);">
+                            500+</div>
+                        <div class="text-white" style="font-size: var(--text-sm); opacity: 0.8;">Projects Completed
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div
+                            style="font-size: var(--text-4xl); font-weight: var(--font-bold); color: var(--color-gold); margin-bottom: var(--space-2);">
+                            50+</div>
+                        <div class="text-white" style="font-size: var(--text-sm); opacity: 0.8;">Global Brands</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div
+                            style="font-size: var(--text-4xl); font-weight: var(--font-bold); color: var(--color-gold); margin-bottom: var(--space-2);">
+                            10</div>
+                        <div class="text-white" style="font-size: var(--text-sm); opacity: 0.8;">Industries Served
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div
+                            style="font-size: var(--text-4xl); font-weight: var(--font-bold); color: var(--color-gold); margin-bottom: var(--space-2);">
+                            20+</div>
+                        <div class="text-white" style="font-size: var(--text-sm); opacity: 0.8;">Countries</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="bg-white" style="padding: var(--space-8) 0; border-bottom: 2px solid var(--color-gray-soft);">
+        <div class="container">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <!-- Service Type Filters -->
+                <div style="text-align: center;">
+                    <h3
+                        style="font-size: var(--text-sm); font-weight: var(--font-semibold); text-transform: uppercase; letter-spacing: var(--tracking-wider); color: var(--text-secondary); margin-bottom: var(--space-4);">
+                        Filter by Service
+                    </h3>
+                    <div id="serviceFilters"
+                        style="display: flex; gap: var(--space-3); flex-wrap: wrap; justify-content: center;">
+                        <button class="filter-btn filter-btn--active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="screen-printing">Screen Printing</button>
+                        <button class="filter-btn" data-filter="color-coating">Color Coating</button>
+                        <button class="filter-btn" data-filter="hot-foil">Hot Foil Stamping</button>
+                        <button class="filter-btn" data-filter="etching">Etching</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="section-padding bg-off-white">
+        <div class="container">
+            <div id="portfolioGrid" class="grid grid-cols-3 gap-8">
+
+                <!-- Project 1: Screen Printing - Cosmetics -->
+                <div class="portfolio-item card card--portfolio" data-service="screen-printing">
+                    <img src="images/portfolio/screen-printing-1.png"
+                        alt="Multi-color screen printed cosmetic bottle with vibrant branding" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #e0e0e0, #f5f5f5);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Luxury Cosmetic Bottle
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Multi-color screen printing with UV-resistant inks for lasting vibrancy
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Screen Printing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Color Coating - Premium Black -->
+                <div class="portfolio-item card card--portfolio" data-service="color-coating">
+                    <img src="images/portfolio/color-coating-1.png" alt="Matte black color coated premium glass bottle"
+                        class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #2c2c2c, #1a1a1a);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Premium Black Edition
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Matte black color coating with smooth, luxury finish
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Color Coating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Hot Foil - Gold Luxury -->
+                <div class="portfolio-item card card--portfolio" data-service="hot-foil">
+                    <img src="images/portfolio/hot-foil-1.png"
+                        alt="Gold foil stamped luxury bottle with metallic accents" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #d4af37, #c9a961);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Gold Foil Luxury Edition
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            24K gold foil stamping on premium glass bottles
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Hot Foil Stamping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Etching - Frosted Elegance -->
+                <div class="portfolio-item card card--portfolio" data-service="etching">
+                    <img src="images/portfolio/etching-1.png" alt="Frosted etched glass bottle with elegant pattern"
+                        class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #ffffff, #e8e8e8);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Artisan Frosted Collection
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Precision glass etching with elegant frosted finish
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Etching</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Screen Printing - Vibrant FMCG -->
+                <div class="portfolio-item card card--portfolio" data-service="screen-printing">
+                    <img src="images/portfolio/screen-printing-2.png"
+                        alt="Vibrant multi-color screen printed product bottle" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #ff6b6b, #4ecdc4);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Vibrant Product Line
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            High-volume screen printing with bright, eye-catching colors
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Screen Printing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Color Coating - Rose Gold -->
+                <div class="portfolio-item card card--portfolio" data-service="color-coating">
+                    <img src="images/portfolio/color-coating-2.png"
+                        alt="Rose gold metallic color coated cosmetic bottle" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #e0b0a1, #d4a5a5);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Rose Gold Collection
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Metallic rose gold coating with glossy premium finish
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Color Coating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Hot Foil - Silver Premium -->
+                <div class="portfolio-item card card--portfolio" data-service="hot-foil">
+                    <img src="images/portfolio/hot-foil-2.png"
+                        alt="Silver foil stamped premium glass bottle with detailed pattern" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #c0c0c0, #a8a8a8);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Silver Premium Edition
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Silver foil stamping with intricate, detailed patterns
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Hot Foil Stamping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Etching - Textured Logo -->
+                <div class="portfolio-item card card--portfolio" data-service="etching">
+                    <img src="images/portfolio/etching-2.png"
+                        alt="Etched glass bottle with textured logo and frosted surface" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #f0f0f0, #d8d8d8);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Textured Elegance
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Elegant etched logo with sophisticated textured surface
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Etching</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: Screen Printing - Gradient Design -->
+                <div class="portfolio-item card card--portfolio" data-service="screen-printing">
+                    <img src="images/portfolio/screen-printing-3.png"
+                        alt="Gradient screen printed bottle with smooth color transition" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #a8edea, #fed6e3);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Gradient Natural Line
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Smooth gradient screen printing with eco-friendly inks
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Screen Printing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10: Color Coating - White Opaque -->
+                <div class="portfolio-item card card--portfolio" data-service="color-coating">
+                    <img src="images/portfolio/color-coating-3.png"
+                        alt="Opaque white color coated pharmaceutical grade bottle" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #ffffff, #f8f8f8);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            UV-Protective Coating
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            UV-protective opaque white coating for sensitive contents
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Color Coating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11: Hot Foil - Holographic -->
+                <div class="portfolio-item card card--portfolio" data-service="hot-foil">
+                    <img src="images/portfolio/hot-foil-3.png"
+                        alt="Holographic foil stamped bottle with rainbow shimmer effect" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #ffd700, #ff69b4, #00bfff);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Holographic Accent
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Holographic foil with mesmerizing rainbow shimmer effect
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Hot Foil Stamping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12: Etching - Intricate Pattern -->
+                <div class="portfolio-item card card--portfolio" data-service="etching">
+                    <img src="images/portfolio/etching-3.png"
+                        alt="Luxury perfume bottle with intricate etched pattern design" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover; background: linear-gradient(135deg, #e8e8e8, #d0d0d0);">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Designer Fragrance
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Intricate pattern etching for luxury perfume bottles
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Etching</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REAL CLIENT WORK - Project 13: Lakme Nail Enamel Remover -->
+                <div class="portfolio-item card card--portfolio" data-service="screen-printing">
+                    <img src="images/portfolio/screen-printing-cosmetics-1.jpg"
+                        alt="Lakme nail enamel remover glass bottle with screen printed branding" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover;">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Lakme Nail Care Collection
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Precise screen printing on premium cosmetic glass bottles for a leading beauty brand
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Screen Printing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REAL CLIENT WORK - Project 14: Revlon Nail Polish (Red) -->
+                <div class="portfolio-item card card--portfolio" data-service="screen-printing">
+                    <img src="images/portfolio/screen-printing-cosmetics-2.jpg"
+                        alt="Revlon nail polish bottle with artistic photography showing screen printed label"
+                        class="card__image" style="width: 100%; height: 350px; object-fit: cover;">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Revlon Nail Enamel Line
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            High-precision screen printing for luxury nail polish packaging
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Screen Printing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REAL CLIENT WORK - Project 15: Revlon Nail Polish (Orange) -->
+                <div class="portfolio-item card card--portfolio" data-service="screen-printing">
+                    <img src="images/portfolio/screen-printing-cosmetics-3.jpg"
+                        alt="Revlon super lustrous nail enamel bottle with vibrant orange background"
+                        class="card__image" style="width: 100%; height: 350px; object-fit: cover;">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Revlon Super Lustrous Collection
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Premium glass bottles with durable, fade-resistant screen printing
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Screen Printing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REAL CLIENT WORK - Project 16: Lakme Insta Liner (Color) -->
+                <div class="portfolio-item card card--portfolio" data-service="screen-printing">
+                    <img src="images/portfolio/screen-printing-cosmetics-4.jpg"
+                        alt="Lakme Insta liner eyeliner glass bottle with screen printed text" class="card__image"
+                        style="width: 100%; height: 350px; object-fit: cover;">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Lakme Insta Liner Collection
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Detailed screen printing on small-format cosmetic glass bottles
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Screen Printing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REAL CLIENT WORK - Project 17: Lakme Insta Liner (B&W) -->
+                <div class="portfolio-item card card--portfolio" data-service="screen-printing">
+                    <img src="images/portfolio/screen-printing-cosmetics-5.jpg"
+                        alt="Lakme Insta liner water resistant eyeliner bottle black and white photography"
+                        class="card__image" style="width: 100%; height: 350px; object-fit: cover;">
+                    <div class="card--portfolio__overlay">
+                        <h4
+                            style="color: var(--text-on-dark); font-size: var(--text-xl); margin-bottom: var(--space-2);">
+                            Lakme Professional Line
+                        </h4>
+                        <p
+                            style="color: var(--color-gray-medium); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+                            Precision screen printing for professional cosmetic packaging
+                        </p>
+                        <div class="card--portfolio__tags">
+                            <span class="card--portfolio__tag">Screen Printing</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" style="display: none; text-align: center; padding: var(--space-20) 0;">
+                <div style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">🔍</div>
+                <h3 style="font-size: var(--text-3xl); margin-bottom: var(--space-4);">No Projects Found</h3>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-8);">
+                    Try selecting a different filter combination
+                </p>
+                <button class="btn btn--secondary" onclick="resetFilters()">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-dark">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 class="text-white" style="font-size: var(--text-4xl); margin-bottom: var(--space-6);">
+                    Ready to Create Your Own Masterpiece?
+                </h2>
+                <p class="text-white"
+                    style="font-size: var(--text-lg); opacity: 0.9; margin-bottom: var(--space-10); line-height: var(--leading-relaxed);">
+                    Let's discuss how we can bring your vision to life with premium glass decoration. From concept to
+                    delivery, we're with you every step of the way.
+                </p>
+                <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn--primary btn--lg">Start Your Project</a>
+                    <a href="services.html" class="btn btn--secondary-light btn--lg">Explore Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <!-- About -->
+                <div>
+                    <h4 class="footer__column-title">About</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: var(--space-3);"><a href="about.html" class="footer__link">About
+                                PGP</a></li>
+                        <li style="margin-bottom: var(--space-3);"><a href="about.html#our-story"
+                                class="footer__link">Our Story</a></li>
+                        <li style="margin-bottom: var(--space-3);"><a href="about.html#facilities"
+                                class="footer__link">Facilities</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="footer__column-title">Services</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: var(--space-3);"><a href="services.html" class="footer__link">Services
+                                Hub</a></li>
+                        <li style="margin-bottom: var(--space-3);"><a href="screen-printing.html"
+                                class="footer__link">Screen Printing</a></li>
+                        <li style="margin-bottom: var(--space-3);"><a href="color-coating.html"
+                                class="footer__link">Color Coating</a></li>
+                        <li style="margin-bottom: var(--space-3);"><a href="hot-foil-stamping.html" class="footer__link"
+                                >Hot Foil Stamping</a></li>
+                        <li style="margin-bottom: var(--space-3);"><a href="etching.html"
+                                class="footer__link">Etching</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="footer__column-title">Resources</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: var(--space-3);"><a href="portfolio.html"
+                                class="footer__link">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="footer__column-title">Contact</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: var(--space-3);"><a href="contact.html" class="footer__link">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <h4 class="footer__column-title">Connect</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: var(--space-3);"><a
+                                href="https://in.linkedin.com/in/farhat-sayed-92b97969" target="_blank"
+                                rel="noopener noreferrer" class="footer__link">LinkedIn</a></li>
+                        <li style="margin-bottom: var(--space-3);"><a href="mailto:popularglassprinters@hotmail.com"
+                                class="footer__link">Email</a></li>
+                        <li style="margin-bottom: var(--space-3);"><a href="https://wa.me/917506250012" target="_blank"
+                                rel="noopener noreferrer" class="footer__link">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer__bottom">
+                <span>
+                    © 2025 Popular Glass Printers. Established 1998. All rights reserved.
+                </span>
+                <span style="color: var(--color-gold); font-weight: var(--font-medium);">
+                    Premium Glass Decoration Partner for Global Brands
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/portfolio-filter.js"></script>
+    <script src="js/scroll-animations.js"></script>
+</body>
+
+</html>

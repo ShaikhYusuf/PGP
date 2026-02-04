@@ -1,0 +1,12 @@
+# Popular Glass Printers - robots.txt
+# https://shaikhyusuf.github.io/PGPrinters/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://shaikhyusuf.github.io/PGPrinters/sitemap.xml
+
+# Disallow admin or private folders (if any)
+# Disallow: /admin/
+# Disallow: /private/
